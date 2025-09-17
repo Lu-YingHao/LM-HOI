@@ -1,5 +1,5 @@
 python -m torch.distributed.launch --nproc_per_node=1 --master_port 3091 --use_env main.py \
-    --batch_size 1 \
+    --batch_size 64 \
     --output_dir ./checkpoints/swig_hoi/cn_clip_alpha_atten\
     --epochs 100 \
     --lr 1e-4 --min-lr 1e-7 \

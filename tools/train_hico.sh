@@ -1,6 +1,6 @@
-export CUDA_VISIBLE_DEVICES=0
+export CUDA_VISIBLE_DEVICES=0,1,2,3
 python -m torch.distributed.launch --nproc_per_node=1 --master_port 3992 --use_env main.py \
-    --batch_size 2 \
+    --batch_size 64 \
     --output_dir ./checkpoints/hico_det/cn_adapter_atten \
     --epochs 200 \
     --lr 1e-4 --min-lr 1e-7 \

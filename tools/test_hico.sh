@@ -1,5 +1,5 @@
 python -m torch.distributed.launch --nproc_per_node=1 --master_port 3091 --use_env main.py \
-    --batch_size 32 \
+    --batch_size 64 \
     --output_dir ../checkpoints/hico_det/test \
     --epochs 100 \
     --lr 1e-4 --min-lr 1e-7 \
@@ -8,4 +8,4 @@ python -m torch.distributed.launch --nproc_per_node=1 --master_port 3091 --use_e
     --enable_dec \
     --dataset_file hico \
     --enable_focal_loss \
-    --eval --pretrained ./checkpoints/hico_det/cn_clip_alpha_atten/checkpoint0155.pth \
+    --eval --pretrained ./checkpoints/hico_det/cn_clip_alpha_atten/checkpoint0155.pth
